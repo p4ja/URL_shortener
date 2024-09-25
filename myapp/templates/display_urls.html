@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>url shortener | display urls</title>
+</head>
+<body>
+<table class="table ">
+  <thead>
+  <tr>
+  <td>date</td>
+  <td>long_url</td>
+  <td>short_url</td>
+  <td>clicks</td>
+  </tr>
+  </thead>
+    <tbody>
+    {% for obj in rows %}
+    <tr>
+        <td>{{obj.date}}</td>
+        <td>{{obj.long_url}}</td>
+        <td>{{obj.short_url}}</td>
+        <td>{{obj.clicks}}</td>
+        <td>
+            <button type="button" class="btn btn-outline-light"><a href="{% url 'delete_urls' url_id=obj.id %}"> delete</a></button>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+
+</table>
+</body>
+</html>
