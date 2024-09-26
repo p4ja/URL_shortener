@@ -26,7 +26,7 @@ A URL shortener is a web application or service that converts long, unwieldy URL
 Shorten long URLs into shorter, more manageable links.
 Redirect users from shortened URLs to the original URLs.
 Track the number of times a shortened URL has been accessed.
-User authentication to manage personalized links (optional).
+
 
 📍Key Features
 
